@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Meme" table="meme">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="imgUrl" type="string" column="img_url" length="512" nullable="false"/>
+    <field name="message" type="string" column="message" length="1024" nullable="false"/>
+    <field name="name" type="string" column="name" length="64" nullable="true"/>
+    <field name="lang" type="string" column="lang" length="2" nullable="false"/>
+    <field name="signature" type="string" column="signature" length="64" nullable="false"/>
+    <field name="nbImpression" type="integer" column="nb_impression" nullable="false"/>
+    <field name="moderated" type="boolean" column="moderated" nullable="false"/>
+    <field name="insertDate" type="datetime" column="insert_date" nullable="false"/>
+  </entity>
+</doctrine-mapping>

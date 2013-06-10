@@ -1,0 +1,7 @@
+parameters:
+#    memegif_front.example.class: Memegif\FrontBundle\Example
+
+services:
+#    memegif_front.example:
+#        class: %memegif_front.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

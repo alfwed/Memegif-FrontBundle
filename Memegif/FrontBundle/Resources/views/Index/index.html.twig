@@ -1,0 +1,66 @@
+{% extends "MemegifFrontBundle::layout.html.twig" %}
+
+{% block title 'Memegif | crées ton MEME' %}
+
+{% block body %}
+<div class="row-fluid">
+    <div class="span12" style="text-align: center; margin-bottom: 20px;">
+        <h1 style="font-size: 50px; line-height: 1;">Crées et partages tes MEME animés!</h1>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span3"></div>
+    <div class="span6">
+        <form action="/" method="post" class="form-vertical" id="form-new-meme">
+            <div class="control-group">
+                <label class="control-label" for="input_img">URL de l'image</label>
+                <div class="controls">
+                    <input class="span12" type="text" id="input_img" name="meme[imgUrl]" placeholder="Adresse de l'image GIF">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input_msg">Ton texte</label>
+                <div class="controls">
+                    <textarea class="span12" id="input_msg" name="meme[message]" placeholder="Mets ici le texte qui accompagnera ton image"></textarea>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input_name">Ton nom</label>
+                <div class="controls">
+                    <input class="span12" type="text" id="input_name" name="meme[name]" placeholder="Laisses vide pour rester anonyme">
+                </div>
+            </div>
+            <div class="progress progress-striped active h">
+                <div class="bar" style="width:0%;"></div>
+            </div>
+            <div class="control-group" style="text-align: center;">
+                <div class="controls">
+                    {{ form_widget(form._token) }}
+                    <input type="submit" class="btn btn-large btn-success" id="input_submit" name="input_submit" value="Partager" data-loading-text="Envoi en cours...">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="row-fluid">
+    <div class="span4">
+        <h2>Cherches une image</h2>
+        <p>qui t'inspires <a href="http://bit.ly/YPCL9e" target="_blank">sur le net</a>. Cette image sera le coeur de ton MemeGif.
+        Seuls les MEMEs ayant une image SFW seront publiées sur le site mais tu pourras partager ta création avec tes amis quoi qu'il arrive!</p>
+    </div>
+    <div class="span4">
+        <h2>Choisis un texte</h2>
+        <p>pour commenter l'image que tu as choisie (en restant dans le poliquement correct si tu veux être publié!).
+        Visites la page des nouveautés si tu es en panne d'inspiration!</p>
+    </div>
+    <div class="span4">
+        <h2>Partages ton MEME</h2>
+        <p>en envoyant à tes amis l'adresse de la page que nous t'avons créée.
+        Des boutons Facebook et Twitter sont également disponibles pour te simplifier la tache!</p>
+    </div>
+</div>
+{% endblock %}

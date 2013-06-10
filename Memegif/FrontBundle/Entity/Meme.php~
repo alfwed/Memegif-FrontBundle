@@ -1,0 +1,81 @@
+<?php
+
+namespace Memegif\FrontBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Meme
+ *
+ * @ORM\Table(name="meme")
+ * @ORM\Entity
+ */
+class Meme
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img_url", type="string", length=512, nullable=false)
+     */
+    private $imgUrl;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="message", type="string", length=1024, nullable=false)
+     */
+    private $message;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=64, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lang", type="string", length=2, nullable=false)
+     */
+    private $lang;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="signature", type="string", length=64, nullable=false)
+     */
+    private $signature;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nb_impression", type="integer", nullable=false)
+     */
+    private $nbImpression;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="moderated", type="boolean", nullable=false)
+     */
+    private $moderated;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="insert_date", type="datetime", nullable=false)
+     */
+    private $insertDate;
+
+
+}

@@ -1,0 +1,29 @@
+body {padding-top:20px;padding-bottom:40px;}
+.mt20{margin-top:20px;}
+.mt40{margin-top:40px;}
+.tac{text-align:center;}
+.tar{text-align:right;}
+form{margin:0;}
+.h{display:none;}
+
+/* Two columns block */
+.two-cols{overflow:hidden;}
+.two-cols l{float:left;}
+.two-cols r{float:right;}
+
+/* Custom container */
+.container-narrow {margin:0 auto;max-width:1000px;}
+.container-narrow > hr {margin:30px 0;}
+
+/* MEME */
+.meme{text-align:center;}
+.meme h4{font-weight:normal;}
+.meme h4 a{color:#333333;}
+.meme img{max-width:600px;max-height:600px;}
+.meme-list{border-top:1px solid #eee;padding:30px 0;}
+.meme-list.first{border-top:none;padding-top:0;}
+
+/* Social buttons */
+.share-btns > div{display:inline-block;}
+.twitter-share-button{vertical-align:top}
+

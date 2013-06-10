@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ asset('bundles/memegiffront/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ asset('bundles/memegiffront/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ asset('bundles/memegiffront/css/main.css') }}" rel="stylesheet" type="text/css" media="all" />
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div class="container-narrow">
+
+            <!-- Header -->
+            <div class="masthead">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="">Accueil</a></li>
+                    <li><a href="">Les plus récents</a></li>
+                </ul>
+                <h3 class="muted">MemeGif.com</h3>
+            </div>
+            <hr>
+    
+            <!-- Content -->
+            {% block body %}{% endblock %}
+    
+            <!-- Footer -->
+            <div class="mt20">
+                <p>&copy; Alfwed 2013</p>
+            </div>
+    
+        </div>
+    
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "MemegifFrontBundle::layout.html.twig" %}
+
+{% block title 'Memegif | view' %}
+
+{% block body %}
+<div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+        <div class="meme">
+            <h4>{{meme.getMessage()}}</h4>
+            <img src="{{meme.getImgUrl()}}" class="mt20">
+            <p class="mt20"><em>{{meme.getName()}}</em></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

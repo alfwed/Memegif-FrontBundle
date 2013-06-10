@@ -1,0 +1,3 @@
+memegif_index:
+    resource: "@MemegifFrontBundle/Controller/IndexController.php"
+    type:     annotation
